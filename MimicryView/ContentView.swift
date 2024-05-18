@@ -43,7 +43,7 @@ struct ContentView: View {
                 Spacer()
             }
         }
-        .animation(.easeOut, value: isExtended)
+        .animation(.smooth(duration: 1, extraBounce: 0.25), value: isExtended)
     }
 }
 
@@ -65,7 +65,6 @@ struct ButtonView: View {
                 Text(isExtended ? "Back" : "Open")
                     .foregroundColor(.white)
                     .padding(.horizontal)
-//                    .animation(nil, value: isExtended)
             }
         }
         .frame(width: 125, height: 75)
